@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" > <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+		
+		
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+		<section id="todo">
+			<h1 id="title">Todo List:</h1>
+			<div id="addTask">
+				<label>Add a task:</label>
+				<input id="taskText" type="text" placeholder="To do..."/><button id="addButton">+</button>
+			</div>
+			<ul id="tasks">
+				
+			</ul>
+		</section>
+		
+		<section id="info">
+			<p>To generate a JSON representation of the list, run this in the console: <code>todoCtrl.toJSON()</code></p>
+			<p>To update the list with a JSON array, run this in the console: <code>todoCtrl.updateTasks('["test 1","test 2","test 3","test 4"]');</code></p>
+			<p><a href="./test/SpecRunner.html">Run Unit Tests</a></p>
+		</section>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <script src="js/vendor/jquery-1.8.2.min.js"></script>
+		<script src="js/vendor/json2.js"></script>
+		
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+		<script>
+			//initialize on page load
+			$(function() {
+				todoCtrl.init();
+				//console.log(todoCtrl.$element);
+				//todoCtrl.addTask('buy eggs')
+				//todoCtrl.addTask('buy milk')
+				//todoCtrl.addTask('buy soda')
+				//var a = $('#tasks li:nth-child(3)');
+				//todoCtrl.removeTask(a);
+				
+				
+			});
+		
+		</script>
+        
+    </body>
+</html>
