@@ -129,6 +129,7 @@ todoCtrl.removeTask = function(task) {
 	}
 	
 	//remove from html
+	toRemove.link.unbind();
 	toRemove.link.remove();
 	//remove from array
 	tasks.splice(i,1);
