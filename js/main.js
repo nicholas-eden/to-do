@@ -89,8 +89,6 @@ todoCtrl._changeHandler = function(e) {
 		//$(this) refers to the animated element
 		todoCtrl.removeTask($(this));
 	});
-	//cleanup
-	$parent = null;
 }
 
 
@@ -135,8 +133,6 @@ todoCtrl.removeTask = function(task) {
 	//remove from array
 	tasks.splice(i,1);
 	
-	//cleanup
-	current = toRemove = null;
 	return true;
 }
 
@@ -153,8 +149,6 @@ todoCtrl._removeAllTasks = function() {
 	
 	tasks.length = 0;
 	
-	//cleanup
-	current = tasks = null;
 	return true;
 }
 
@@ -200,9 +194,6 @@ todoCtrl.updateTasks = function(newData) {
 		this.addTask(newTasks[i]);
 	}
 	
-	
-	//cleanup
-	newTasks = strParsed = null;
 	return true;
 }
 
@@ -243,8 +234,6 @@ todoCtrl._addListeners = function () {
 		todoCtrl._taskSubmit.call(todoCtrl);
 	});
 	
-	//cleanup
-	$taskInput = $addButton = null;
 }
 
 todoCtrl._taskSubmit = function() {
@@ -254,9 +243,7 @@ todoCtrl._taskSubmit = function() {
 	if (text !== '') {
 		this.addTask(text);
 	}
-	$taskInput.val('')
-	//cleanup
-	$taskInput = null;
+	$taskInput.val('');
 }
 
 
